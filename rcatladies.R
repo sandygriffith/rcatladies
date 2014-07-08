@@ -57,7 +57,7 @@ cat_nums <- ddply(rcat.df.all, .(created), summarise,
 cat_nums <- subset(cat_nums, created <= as.Date("2014-07-07"))
 
 #retrieve cat phylopic
-cat <- get_image("23cd6aa4-9587-4a2e-8e26-de42885004c9", size = 128)[[1]]
+cat <- get_image("23cd6aa4-9587-4a2e-8e26-de42885004c9", size = 512)[[1]]
 
 
 ggplot(aes(created, tweet_num), data = cat_nums) + geom_point(aes(size = 1.5)) + 
